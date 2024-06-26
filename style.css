@@ -178,8 +178,14 @@ body {
     background-color: palegoldenrod;
 }
 
-.elem .dets:hover {
-    height: 220px;
+.elem .dets {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 1.1em;
+    font-family: 'futura';
+    color: rgb(74, 69, 6);
 }
 
 #page3 {

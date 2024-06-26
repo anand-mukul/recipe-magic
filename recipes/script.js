@@ -74,7 +74,6 @@ function renderRecipePage(recipe) {
   const recipeInDetail = document.getElementById("recipe-in-detail");
   recipeInDetail.appendChild(recipeCard);
 }
-
 const rateAndReview = document.getElementById("recipe-card-button");
 
 rateAndReview.addEventListener("click", (event) => {
@@ -82,22 +81,25 @@ rateAndReview.addEventListener("click", (event) => {
   rateRecipeById(recipeId);
 });
 
-
 // Function to open the popup card
 function rateRecipeById(recipeId) {
   // Get the recipe from local storage
-  let recipes = JSON.parse(localStorage.getItem('recipes'));
+  let recipes = JSON.parse(localStorage.getItem('recipes')) || [];
   let recipe = recipes.find(r => r.id === recipeId);
 
-  // Set the title in the popup
-  document.getElementById('recipeTitle').textContent = recipe.title;
+  if (recipe) {
+    // Set the title in the popup
+    document.getElementById('recipeTitle').textContent = recipe.title;
 
-  // Show the popup with GSAP animation
-  gsap.to('#rateRecipePopup', {
-    display: 'block',
-    opacity: 1,
-    duration: 0.5,
-  });
+    // Show the popup with GSAP animation
+    gsap.to('#rateRecipePopup', {
+      display: 'block',
+      opacity: 1,
+      duration: 0.5,
+    });
+  } else {
+    console.error('Recipe not found');
+  }
 }
 
 // Function to submit the rating
@@ -106,19 +108,31 @@ function submitRating() {
   let review = document.getElementById('review').value;
   let recipeTitle = document.getElementById('recipeTitle').textContent;
 
+  // Validate the rating input
+  if (rating < 1 || rating > 5 || rating === '') {
+    alert('Please enter a valid rating between 1 and 5.');
+    return;
+  }
+
   // Get the recipes from local storage
-  let recipes = JSON.parse(localStorage.getItem('recipes'));
+  let recipes = JSON.parse(localStorage.getItem('recipes')) || [];
   let recipe = recipes.find(r => r.title === recipeTitle);
 
-  // Update the recipe with the new rating and review
-  recipe.userRatings.push(Number(rating));
-  recipe.userReviews.push(review);
+  if (recipe) {
+    // Update the recipe with the new rating and review
+    recipe.userRatings = recipe.userRatings || [];
+    recipe.userReviews = recipe.userReviews || [];
+    recipe.userRatings.push(Number(rating));
+    recipe.userReviews.push(review);
 
-  // Save the updated recipes back to local storage
-  localStorage.setItem('recipes', JSON.stringify(recipes));
+    // Save the updated recipes back to local storage
+    localStorage.setItem('recipes', JSON.stringify(recipes));
 
-  // Close the popup
-  closePopup();
+    // Close the popup
+    closePopup();
+  } else {
+    console.error('Recipe not found');
+  }
 }
 
 // Function to close the popup card
