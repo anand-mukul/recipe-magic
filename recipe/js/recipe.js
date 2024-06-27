@@ -258,7 +258,7 @@ const predefinedRecipes = [
     category: "Traditional Favorites"
   },
   {
-    title: "2 Minute Maggi",
+    title: "2 Minute Maggie",
     ingredients: ["Maggi Noodles", "Water", "Maggi Tastemaker"],
     procedure: "1. Boil 1 1/2 cups of water in a pan.\n2. Add Maggi noodles and cook for 2 minutes.\n3. Add the Maggi Tastemaker and stir well.\n4. Cook for another minute or until the water is almost absorbed.\n5. Optional: Add vegetables, eggs, or cheese as desired. Mix well and serve hot.",
     image: "../../assets/elem2-maggie.png",
