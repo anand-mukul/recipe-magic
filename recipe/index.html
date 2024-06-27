@@ -168,14 +168,14 @@
           <!-- show recipes dynamically -->
         </div>
       </div>      
-      <!-- <div id="page5">
+      <div id="page5">
         <div class="popup-overlay" id="popupOverlay"></div>
         <form id="popupForm">
           <div class="popup-form" id="popupFormDiv">
             <div id="popupForm-body">
               <div id="popupForm-left">
                 <div id="popupForm-header">
-                  <h1 id="title">Add new Recipe</h1>
+                  <h1 id="title">Add New Recipe</h1>
                 </div>
                 <div id="image-preview">
                   <img id="imagePreview" />
@@ -243,9 +243,7 @@
                       <div id="recipeForm-bookmark-checkbox-text">Bookmark</div>
                       <input
                         type="checkbox"
-                        placeholder="Bookmark"
-                        id="recipeForm-bookmark-checkbox"
-                        required
+                        id="recipeForm-bookmark"
                       />
                     </div>
                   </div>
@@ -253,15 +251,16 @@
                     <textarea
                       placeholder="Procedure (comma separated)"
                       id="recipeForm-procedure"
+                      required
                     ></textarea>
-                    <button id="submit-button"  type="submit"></button>
+                    <button id="submit-button" type="submit"></button>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </form>
-      </div> -->
+      </div>      
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
@@ -284,5 +283,6 @@
     <script src="js/engine.js"></script>
     <script src="js/search.js"></script>
     <script src="js/recipeCard.js"></script>
+    <script src="js/addRecipe.js"></script>
   </body>
 </html>

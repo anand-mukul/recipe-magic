@@ -12,7 +12,7 @@ const predefinedRecipes = [
     duration: "15 mins",
     userRatings: [],
     userReviews: [],
-    bookmarked: true,
+    bookmarked: false,
     type: RecipeType.NONVEG,
     category: "Trending"
   },
@@ -24,7 +24,7 @@ const predefinedRecipes = [
     duration: "30 mins",
     userRatings: [],
     userReviews: [],
-    bookmarked: true,
+    bookmarked: false,
     type: RecipeType.NONVEG,
     category: "Trending"
   },
@@ -36,7 +36,7 @@ const predefinedRecipes = [
     duration: "10 mins",
     userRatings: [],
     userReviews: [],
-    bookmarked: true,
+    bookmarked: false,
     type: RecipeType.VEG,
     category: "Instant"
   },
@@ -48,8 +48,9 @@ const predefinedRecipes = [
     duration: "20 mins",
     userRatings: [1, 2, 3, 4],
     userReviews: ["Good", "Bad"],
+    bookmarked: false,
+    type: RecipeType.VEG,
     category: "Globally",
-    type: RecipeType.VEG
   },
   {
     title: "Butter Chicken",
@@ -59,7 +60,7 @@ const predefinedRecipes = [
     duration: "45 mins",
     userRatings: [],
     userReviews: [],
-    bookmarked: true,
+    bookmarked: false,
     type: RecipeType.NONVEG,
     category: "Indian"
   },
@@ -71,7 +72,7 @@ const predefinedRecipes = [
     duration: "60 mins",
     userRatings: [],
     userReviews: [],
-    bookmarked: true,
+    bookmarked: false,
     type: RecipeType.VEG,
     category: "Indian"
   },
@@ -83,7 +84,7 @@ const predefinedRecipes = [
     duration: "40 mins",
     userRatings: [],
     userReviews: [],
-    bookmarked: true,
+    bookmarked: false,
     type: RecipeType.VEG,
     category: "Indian"
   },
@@ -95,7 +96,7 @@ const predefinedRecipes = [
     duration: "30 mins",
     userRatings: [],
     userReviews: [],
-    bookmarked: true,
+    bookmarked: false,
     type: RecipeType.VEG,
     category: "Indian"
   },
@@ -107,7 +108,7 @@ const predefinedRecipes = [
     duration: "50 mins",
     userRatings: [],
     userReviews: [],
-    bookmarked: true,
+    bookmarked: false,
     type: RecipeType.NONVEG,
     category: "Globally"
   },
@@ -119,7 +120,7 @@ const predefinedRecipes = [
     duration: "60 mins",
     userRatings: [],
     userReviews: [],
-    bookmarked: true,
+    bookmarked: false,
     type: RecipeType.NONVEG,
     category: "Globally"
   },
@@ -131,7 +132,7 @@ const predefinedRecipes = [
     duration: "35 mins",
     userRatings: [],
     userReviews: [],
-    bookmarked: true,
+    bookmarked: false,
     type: RecipeType.NONVEG,
     category: "Globally"
   },
@@ -143,7 +144,7 @@ const predefinedRecipes = [
     duration: "25 mins",
     userRatings: [],
     userReviews: [],
-    bookmarked: true,
+    bookmarked: false,
     type: RecipeType.NONVEG,
     category: "Globally"
   },
@@ -155,7 +156,7 @@ const predefinedRecipes = [
     duration: "5 mins",
     userRatings: [],
     userReviews: [],
-    bookmarked: true,
+    bookmarked: false,
     type: RecipeType.VEG,
     category: "Instant"
   },
@@ -167,7 +168,7 @@ const predefinedRecipes = [
     duration: "2 mins",
     userRatings: [],
     userReviews: [],
-    bookmarked: true,
+    bookmarked: false,
     type: RecipeType.VEG,
     category: "Instant"
   },
@@ -179,7 +180,7 @@ const predefinedRecipes = [
     duration: "10 mins",
     userRatings: [],
     userReviews: [],
-    bookmarked: true,
+    bookmarked: false,
     type: RecipeType.VEG,
     category: "Instant"
   },
@@ -191,7 +192,7 @@ const predefinedRecipes = [
     duration: "5 mins",
     userRatings: [],
     userReviews: [],
-    bookmarked: true,
+    bookmarked: false,
     type: RecipeType.VEG,
     category: "Instant"
   },
@@ -203,7 +204,7 @@ const predefinedRecipes = [
     duration: "20 mins",
     userRatings: [],
     userReviews: [],
-    bookmarked: true,
+    bookmarked: false,
     type: RecipeType.VEG,
     category: "Students' Favorite"
   },
@@ -215,7 +216,7 @@ const predefinedRecipes = [
     duration: "10 mins",
     userRatings: [],
     userReviews: [],
-    bookmarked: true,
+    bookmarked: false,
     type: RecipeType.VEG,
     category: "Students' Favorite"
   },
@@ -227,7 +228,7 @@ const predefinedRecipes = [
     duration: "10 mins",
     userRatings: [],
     userReviews: [],
-    bookmarked: true,
+    bookmarked: false,
     type: RecipeType.VEG,
     category: "Students' Favorite"
   },
@@ -239,7 +240,7 @@ const predefinedRecipes = [
     duration: "15 mins",
     userRatings: [],
     userReviews: [],
-    bookmarked: true,
+    bookmarked: false,
     type: RecipeType.NONVEG,
     category: "Students' Favorite"
   },

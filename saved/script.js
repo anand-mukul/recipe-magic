@@ -1,18 +1,16 @@
 function showSavedRecipes() {
-    const recipes = JSON.parse(localStorage.getItem("bookmarkedRecipes"));
-    recipes.forEach((recipe) => createBookmarkedRecipeCard(recipe));
+  const recipes = JSON.parse(localStorage.getItem('recipes')) || [];
+  const bookmarkedRecipes = recipes.filter(recipe => recipe.bookmarked);
+  bookmarkedRecipes.forEach(recipe => createBookmarkedRecipeCard(recipe));
 }
 
 function createBookmarkedRecipeCard(recipe) {
-    const recipeCard = document.createElement("div");
-    recipeCard.className = "recipe-card";
+  const recipeCard = document.createElement("div");
+  recipeCard.className = "recipe-card";
+  const isBookmarked = recipe.bookmarked;
+  const bookmarkIconClass = isBookmarked ? 'ri-bookmark-fill' : 'ri-bookmark-line';
 
-    const bookmarkedRecipes = JSON.parse(localStorage.getItem('bookmarkedRecipes')) || [];
-    const isBookmarked = bookmarkedRecipes.some(bookmark => bookmark.id === recipe.id);
-
-    const bookmarkIconClass = isBookmarked ? 'ri-bookmark-fill' : 'ri-bookmark-line';
-
-    recipeCard.innerHTML = `
+  recipeCard.innerHTML = `
       <div class="bookmark-button" data-recipe-id="${recipe.id}">
         <i class="${bookmarkIconClass}"></i>
       </div>
@@ -32,8 +30,8 @@ function createBookmarkedRecipeCard(recipe) {
         </div>
       </div>
     `;
-    const savedRecipes = document.getElementById("saved-recipe");
-    savedRecipes.appendChild(recipeCard);
+  const savedRecipes = document.getElementById("saved-recipe");
+  savedRecipes.appendChild(recipeCard);
 }
 
 showSavedRecipes();
