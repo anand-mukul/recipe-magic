@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!token) {
         const attemptedUrl = window.location.href;
         localStorage.setItem('attemptedUrl', attemptedUrl);
-        window.location.href = '/auth/login.html'; // Redirect to login page
+        window.location.href = '/auth/login.html';
     }
 
     const logoutButton = document.getElementById('logout');

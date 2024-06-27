@@ -27,6 +27,8 @@ body {
     align-items: flex-start;
     justify-content: space-between;
     padding: 25px;
+    background-color: #e6e6fa3c;
+    backdrop-filter: blur(2px);
 }
 
 

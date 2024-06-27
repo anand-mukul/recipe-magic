@@ -17,7 +17,7 @@ body {
 }
 
 body {
-    background-color: #FADADD;
+    background-color: #B0E0E6;
 }
 
 #nav {
@@ -28,7 +28,7 @@ body {
     align-items: flex-start;
     justify-content: space-between;
     padding: 25px;
-    background-color: #fadadd37;
+    background-color: #b0e0e63f;
     backdrop-filter: blur(2px);
 }
 

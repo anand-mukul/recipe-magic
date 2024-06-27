@@ -3,8 +3,15 @@ const popupOverlay = document.getElementById("popupOverlay");
 const popupForm = document.getElementById("popupForm");
 
 addNewRecipe.addEventListener("click", () => {
-  popupOverlay.style.display = "flex";
-  popupForm.style.display = "flex";
+  const token = localStorage.getItem('token');
+  if (!token) {
+    const attemptedUrl = window.location.href;
+    localStorage.setItem('attemptedUrl', attemptedUrl);
+    window.location.href = '/auth/login.html';
+  } else {
+    popupOverlay.style.display = "flex";
+    popupForm.style.display = "flex";
+  }
 });
 
 function closePopup() {
@@ -12,7 +19,7 @@ function closePopup() {
   popupForm.style.display = "none";
 }
 
-document.getElementById('popupForm').addEventListener('submit', function(event) {
+document.getElementById('popupForm').addEventListener('submit', function (event) {
   event.preventDefault();
   console.log("clicked");
   const title = document.getElementById('recipeForm-title').value;
@@ -53,12 +60,12 @@ function previewImage() {
   const imageUrl = document.getElementById("recipeForm-image").value;
   const imagePreview = document.getElementById("imagePreview");
   console.log(imageUrl);
-  
+
   if (imageUrl) {
     imagePreview.src = imageUrl;
-    imagePreview.style.display = "flex"; 
+    imagePreview.style.display = "flex";
   } else {
     imagePreview.src = "";
-    imagePreview.style.display = "none"; 
+    imagePreview.style.display = "none";
   }
 }
